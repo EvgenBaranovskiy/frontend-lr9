@@ -84,7 +84,7 @@ let isGeneratorEnabled = true; //флаг - чи доступна кнопка "
 let currentStage = 0; //Поточний етап гри
 
 document.addEventListener("DOMContentLoaded", () => {
-	player1.name = prompt("Введіть ім'я: ");
+    player1.name = prompt("Введіть ім'я: ");
 
     if (player1.name == null || !isValidName(player1.name)) {
         alert("Розмір ім'я повинен бути від 1 до 18 символів!");
@@ -205,7 +205,7 @@ function getCardBackgroundPositionByOffset(left = 0, right = 0) {
 //Функція для генерації рандомниї карти та масті
 function getRandomCard() {
     //Генерація рандомного номіналу
-    let randomNumber = Math.floor(Math.random() * 10);
+    let randomNumber = Math.floor(Math.random() * 9) + 1;
     //Генерація карткової масті
     let randomNumberForSuit = Math.floor(Math.random() * 4);
     let suitTopOffset = 0 - (randomNumberForSuit * cardHeight);
